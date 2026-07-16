@@ -12,6 +12,12 @@ Minimal Fastify status service: one page, one JSON endpoint, no database.
   route that uses them.
 - ESM throughout — relative imports carry the `.js` extension even though
   the source files are `.ts`.
+- `src/app.ts` is the composition root (builds the Fastify instance without
+  starting the listener) so tests can `app.inject()` without binding a port.
+  `src/server.ts` only calls `buildApp()` and listens.
+- The front end is static, framework-free HTML/CSS/vanilla JS in `public/`,
+  served via `@fastify/static`. It only talks to the API through
+  `/status.json` — don't add a build step or a UI framework for this.
 
 ## Commands
 - `npm run dev` — start the server with hot reload (tsx watch).

@@ -1,9 +1,6 @@
-import Fastify from "fastify";
-import { statusRoutes } from "./routes/status.js";
+import { buildApp } from "./app.js";
 
-const app = Fastify({ logger: true });
-app.register(statusRoutes);
-
+const app = buildApp();
 const port = Number(process.env.PORT ?? 4000);
 
 app.listen({ port }, (err) => {
