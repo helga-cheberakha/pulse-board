@@ -10,7 +10,10 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:3000 (HTML) or http://localhost:3000/status.json (JSON).
+Then open http://localhost:4000 (HTML) or http://localhost:4000/status.json (JSON).
+
+Port defaults to 4000 (set `PORT` to override) so it doesn't collide with
+DevDigest's client, which runs on 3000.
 
 ## Test
 
