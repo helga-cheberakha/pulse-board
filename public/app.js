@@ -20,7 +20,13 @@ async function refresh() {
       data.lastCheckedAt,
     ).toLocaleTimeString();
     dot.classList.remove("down");
+    if (data.state === "degraded") {
+      dot.classList.add("degraded");
+    } else {
+      dot.classList.remove("degraded");
+    }
   } catch {
+    dot.classList.remove("degraded");
     dot.classList.add("down");
   }
 }
