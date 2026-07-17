@@ -4,3 +4,7 @@ export interface StatusSnapshot {
   lastCheckedAt: string;
   state: "healthy" | "degraded";
 }
+
+export interface HealthSnapshot {
+  status: "ok";
+}
