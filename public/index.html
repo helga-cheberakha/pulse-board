@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>pulse-board</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <div class="header">
+        <span id="dot" class="dot"></span>
+        <h1>pulse-board</h1>
+      </div>
+      <dl class="stats">
+        <dt>Version</dt>
+        <dd id="version">—</dd>
+        <dt>Uptime</dt>
+        <dd id="uptime">—</dd>
+        <dt>Last checked</dt>
+        <dd id="last-checked">—</dd>
+      </dl>
+      <footer>Auto-refreshing every 5s · <a href="/status.json">raw JSON</a></footer>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
